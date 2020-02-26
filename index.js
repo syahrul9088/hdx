@@ -4,7 +4,6 @@ const cheerio = require('cheerio');
 const { URLSearchParams } = require('url');
 const readline = require("readline-sync");
 const rp = require('request-promise');
-const chalk = require('chalk');
 var random = require('random-name')
 var randomize = require('randomatic')
 const ipv4gen = require("ipv4-gen");
