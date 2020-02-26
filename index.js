@@ -105,13 +105,9 @@ const functionVeryf = (url) => new Promise((resolve, rejected) => {
         console.log('[!] Mencoba mendapatkan link verif...')
         await delay(5000)
         const getLink = await functionGetLink(rand, 'aminudin.me')
-        if(getLink){
-            console.log(`[+] Link berhasil didapatkan ${getLink}`)
-            const verif = await functionVeryf(getLink)
-            console.log('[+] Berhasil verifikasi!\n')
-        } else {
-            console.log('[!] Gagal mendapatkan link!\n')
-        }
+        console.log(`[+] Link berhasil didapatkan ${getLink}`)
+        const verif = await functionVeryf(getLink)
+        console.log('[+] Berhasil verifikasi!\n')
     } catch (e) {
         console.log(e);
    }
