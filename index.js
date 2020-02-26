@@ -8,8 +8,8 @@ var random = require('random-name')
 var randomize = require('randomatic')
 const ipv4gen = require("ipv4-gen");
 
-const getReff = () => new Promise((resolve, reject) => {
-    fetch('https://vy.tc/j6oTX24', {
+const getReff = (link) => new Promise((resolve, reject) => {
+    fetch(link, {
         method: 'GET',
     }).then(async res => {
         const $ = cheerio.load(await res.text());
@@ -88,7 +88,10 @@ const functionVeryf = (url) => new Promise((resolve, rejected) => {
 
 
 (async () => {
-    const reff = readline.question('[?] Code reff: ')
+    const link = readline.question('[?] Link (ex => https://vy.tc/j6oTX24): ')
+    const getCode = await getReff(link)
+    var reff = getCode.reff
+    console.log(`[+] Refferal code ${reff}`)
     const jumlah = readline.question('[?] Jumlah reff: ')
     for (var i = 0; i < jumlah; i++) {
     try {
