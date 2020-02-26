@@ -88,10 +88,7 @@ const functionVeryf = (url) => new Promise((resolve, rejected) => {
 
 
 (async () => {
-    const link = readline.question('[?] Link (ex => https://vy.tc/j6oTX24): ')
-    const getCode = await getReff(link)
-    var reff = getCode.reff
-    console.log(`[+] Refferal code ${reff}`)
+    const reff = readline.question('[?] Code reff: ')
     const jumlah = readline.question('[?] Jumlah reff: ')
     for (var i = 0; i < jumlah; i++) {
     try {
