@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 const cheerio = require('cheerio');
-const fs = require('async-file');
 const delay = require('delay');
 const readlineSync = require('readline-sync');
 const { URLSearchParams } = require('url');
